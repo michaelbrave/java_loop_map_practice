@@ -22,7 +22,7 @@ public class Main {
         System.out.println("please input 5 numbers");
         int[] inputNum = {0,0,0,0,0};
         for (int i= 0; i < inputNum.length; i++) {
-            System.out.printf("please enter number %d\n", i);
+            System.out.printf("please enter number %d\n", i+1);
             inputNum[i] = scanner.nextInt();
         }
         return inputNum;
@@ -31,14 +31,16 @@ public class Main {
         // find sum
         int sum = 0;
         for(int i = 0; i < num.length; i++) {
+            //System.out.printf("%d\n", num[i]);
             sum += num[i];
         }
         return sum;
     }
     public static int product(int[] num) {
         // find product
-        int product = 0;
+        int product = num[0];
         for(int i = 0; i < num.length; i++) {
+            //System.out.printf("%d\n", num[i]);
             product *= num[i];
         }
         return product;
@@ -48,6 +50,7 @@ public class Main {
         int largest = num[0];
         for(int i = 0; i < num.length; i++) {
             if (largest < num[i]) {
+                //System.out.printf("%d\n", num[i]);
                 largest = num[i];
             }
         }
@@ -55,9 +58,10 @@ public class Main {
     }
     public static int smallest(int[] num) {
         // find smallest
-        int smallest = 0;
+        int smallest = num[0];
         for(int i = 0; i < num.length; i++) {
             if (smallest > num[i]) {
+                //System.out.printf("%d\n", num[i]);
                 smallest = num[i];
             }
         }
